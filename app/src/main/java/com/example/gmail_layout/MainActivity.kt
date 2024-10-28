@@ -18,11 +18,8 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gmail_layout.data.DataSource
-import com.example.gmail_layout.listOfMail.MailAdapter
-import com.example.gmail_layout.listOfMail.MailCallback
-import com.example.gmail_layout.navigation.NavAdapter
-import com.example.gmail_layout.navigation.NavItem
-import com.example.gmail_layout.navigation.NavMenuItemCallback
+import com.example.gmail_layout.listOfMail.*
+import com.example.gmail_layout.navigation.*
 import com.example.gmail_layout.search.SearchActivity
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
@@ -54,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             swipeRightToRemove()
         } catch (e: Exception) {
             e.printStackTrace()
-            Toast.makeText(this, "Error initializing app: ${e.message}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -92,7 +89,7 @@ class MainActivity : AppCompatActivity() {
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            Toast.makeText(this, "Error initializing views: ${e.message}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -100,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         try {
             mailRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                    if (::extFab.isInitialized) {
+                    if (::extFab.isInitialized) {  // Check if extFab is initialized
                         if (dy > 0) {
                             extFab.shrink()
                         } else {
@@ -138,10 +135,58 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createNavigationMenu(): List<NavItem> {
-        // Move the navigation menu creation to a separate function for better organization
         return mutableListOf<NavItem>().apply {
-            // ... (Keep your existing navigation menu items)
-            // Note: Make sure all string resources exist in your res/values/strings.xml
+            MenuItem(R.drawable.ic_baseline_all_inbox_24,
+                R.string.all_inboxes.toString(), false, 120)
+
+            MenuItem(R.drawable.ic_baseline_inbox_24,
+                R.string.main.toString(), false, 120)
+
+            MenuItem(R.drawable.ic_outline_local_offer_24,
+                R.string.promotions.toString(), false, 20)
+
+            MenuItem(R.drawable.ic_baseline_person_outline_24,
+                R.string.social.toString(), false, 120)
+
+            MenuItem(R.drawable.ic_outline_info_24,
+                R.string.update.toString(), false, 5)
+
+            LabelItem(R.string.all_labels.toString())
+
+            MenuItem(R.drawable.ic_baseline_star_border_24,
+                R.string.favorite.toString(), false)
+
+            MenuItem(R.drawable.ic_outline_send_24,
+                R.string.sent.toString(), false)
+
+            MenuItem(R.drawable.ic_baseline_snooze_24,
+                R.string.scheduled.toString(),false)
+
+            MenuItem(R.drawable.ic_outline_drafts_24,
+                R.string.drafts.toString(), false)
+
+            MenuItem(R.drawable.ic_baseline_mail_outline_24,
+                R.string.all_mails.toString(), false)
+
+            MenuItem(R.drawable.ic_outline_info_24,
+                R.string.spam.toString(), false)
+
+            MenuItem(R.drawable.ic_baseline_delete_outline_24,
+                R.string.trash.toString(), false)
+
+            MenuItem(R.drawable.ic_outline_label_24,
+                R.string.label.toString(), false)
+
+            LabelItem(R.string.google_apps.toString())
+
+            MenuItem(R.drawable.ic_baseline_calendar_today_24,
+                R.string.calendar.toString(), false)
+
+            MenuItem(R.drawable.ic_baseline_person_outline_24,
+                R.string.contacts.toString(), false)
+
+            MenuItem(R.drawable.ic_outline_settings_24,
+                R.string.settings.toString(), false)
         }
     }
 
