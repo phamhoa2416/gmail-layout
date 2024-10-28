@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Gmail UI</string>
+    <!-- Mail item -->
+    <string name="avatar">Avatar</string>
+    <string name="mail_title">Title</string>
+    <string name="mail_description">Description</string>
+
+    <string name="date">Date</string>
+    <string name="content">Content</string>
+    <string name="number">+99</string>
+    <string name="tag">Tag</string>
+    <string name="category_name">Category Name</string>
+    <string name="_category_counter">22 new</string>
+    <string name="history">history</string>
+    <string name="category_description">Description</string>
+    <string name="menu">Menu</string>
+    <string name="search_in_mail">Search in mail</string>
+    <string name="searching">Searching</string>
+    <string name="search">Search…</string>
+    <string name="recent_mail_search">Recent Mail Search</string>
+    <string name="compose">Soạn thư</string>
+    <string name="item_searched">Item Searched</string>
+    <string name="back_button">Back Button\n</string>
+
+    <!-- Navigation items -->
+    <string name="all_inboxes"> Tất cả hộp thư đến </string>
+    <string name="main"> Chính </string>
+    <string name="promotions"> Quảng cáo </string>
+    <string name="social"> Mạng xã hội </string>
+    <string name="update"> Cập nhật </string>
+    <string name="all_labels"> Tất cả nhãn </string>
+    <string name="favorite"> Có gắn dấu sao </string>
+    <string name="sent"> Đã gửi </string>
+    <string name="scheduled"> Đã lên lịch </string>
+    <string name="drafts"> Thư nháp </string>
+    <string name="all_mails"> Tất cả thư </string>
+    <string name="spam"> Thư rác </string>
+    <string name="trash"> Thùng rác </string>
+    <string name="label"> To-Read </string>
+    <string name="google_apps"> Các ứng dụng của Google </string>
+    <string name="contacts"> Liên hệ </string>
+    <string name="calendar"> Lịch </string>
+    <string name="settings"> Cài đặt </string>
+
+    <!-- Navigation menu -->
+    <string name="menu_home">Home\n</string>
+    <string name="menu_gallery">Gallery\n</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+</resources>

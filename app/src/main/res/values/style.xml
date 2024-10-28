@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary"> @color/color_primary </item>
+        <item name="colorPrimaryDark"> @color/color_primary_dark </item>
+        <item name="colorAccent"> @color/color_accent </item>
+
+        <item name="background_color"> @color/light_background </item>
+        <item name="text_color"> @color/light_text_color </item>
+        <item name="text_second_color"> @color/light_text_second_color </item>
+        <item name="search_bg_color"> @color/light_search_background </item>
+        <item name="nav_icon_tint"> @color/light_nav_icon_tint </item>
+        <item name="fab_bg_color"> @color/light_fab_color </item>
+        <item name="fab_tint_color"> @color/light_fab_tint </item>
+    </style>
+
+
+    <style name="DarkTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#202125</item>
+        <item name="colorPrimaryDark">#202125</item>
+        <item name="colorAccent">@color/color_accent</item>
+
+        <item name="background_color">@color/dark_background</item>
+        <item name="text_color">@color/dark_text_color</item>
+        <item name="text_second_color">@color/dark_text_second_color</item>
+        <item name="search_bg_color">@color/dark_search_background</item>
+        <item name="fab_bg_color">@color/dark_fab_color</item>
+        <item name="fab_tint_color">@color/dark_fab_tint</item>
+        <item name="nav_icon_tint">@color/dark_nav_icon_tint</item>
+    </style>
+
+    <!-- <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar"></style> -->
+</resources>
